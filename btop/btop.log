@@ -1,0 +1,30 @@
+
+2024/01/25 (15:07:51) | ===> btop++ v.1.3.0
+2024/01/25 (15:07:51) | INFO: Logger set to INFO
+2024/01/25 (15:08:08) | INFO: Quitting! Runtime: 00:01:15
+
+2024/01/25 (21:57:59) | ===> btop++ v.1.3.0
+2024/01/25 (21:57:59) | INFO: Logger set to INFO
+2024/01/25 (21:57:59) | INFO: Running on /dev/pts/0
+2024/01/25 (21:57:59) | INFO: Failed to load libnvidia-ml.so, NVIDIA GPUs will not be detected: libnvidia-ml.so.1: cannot open shared object file: No such file or directory
+2024/01/25 (21:57:59) | INFO: Failed to load librocm_smi64.so, AMD GPUs will not be detected: librocm_smi64.so.1.0: cannot open shared object file: No such file or directory
+2024/01/25 (21:58:04) | INFO: Quitting! Runtime: 00:00:05
+
+2024/05/02 (17:40:47) | ===> btop++ v.1.2.13
+2024/05/02 (17:40:47) | INFO: Logger set to INFO
+2024/05/02 (17:40:47) | WARNING: No UTF-8 locale detected! Some symbols might not display correctly.
+2024/05/02 (17:40:47) | INFO: Running on /dev/ttys001
+2024/05/02 (17:40:48) | ERROR: Exception in runner thread -> Cpu:: -> key not found
+2024/05/02 (17:40:48) | INFO: Quitting! Runtime: 00:00:01
+
+2024/05/11 (17:34:43) | ===> btop++ v.1.3.2
+2024/05/11 (17:34:43) | INFO: Logger set to INFO
+2024/05/11 (17:34:43) | WARNING: Failed to set locale UTF-8 continuing anyway.
+2024/05/11 (17:34:43) | INFO: Running on /dev/ttys000
+2024/05/11 (17:34:54) | INFO: Quitting! Runtime: 00:00:11
+
+2024/05/31 (21:41:01) | ===> btop++ v.1.3.2
+2024/05/31 (21:41:01) | INFO: Logger set to INFO
+2024/05/31 (21:41:01) | WARNING: Failed to set locale UTF-8 continuing anyway.
+2024/05/31 (21:41:01) | INFO: Running on /dev/ttys000
+2024/05/31 (21:41:02) | INFO: Quitting! Runtime: 00:00:01

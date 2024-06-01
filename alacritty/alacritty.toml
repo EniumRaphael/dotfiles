@@ -1,0 +1,21 @@
+import = [
+	"~/.config/alacritty/nord.toml"
+]
+
+[env]
+	TERM = "xterm-256color"
+[window]
+	decorations = "Buttonless"
+	blur = true
+	opacity = 0.713
+	padding = { x = 2, y = 2 }
+	dynamic_padding = true
+
+[font]
+	size = 14
+	normal = { family = "Hack Nerd Font", style = "Regular" }
+	bold = { family = "Hack Nerd Font", style = "Bold" }
+	italic = { family = "Hack Nerd Font", style = "Italic" }
+
+[terminal]
+	osc52 = "CopyPaste"
