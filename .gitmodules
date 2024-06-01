@@ -5,4 +5,4 @@
 [submodule "nvim"]
 	path = nvim
 	url = git@github.com:EniumRaphael/neovimconf.git
-	branch = master
+	branch = main
