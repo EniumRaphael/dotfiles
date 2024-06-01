@@ -1,6 +1,6 @@
 [submodule "fish"]
-    path = ./fish
-    url = git@github.com:EniumRaphael/fish_config.git
+	path = fish
+	url = git@github.com:EniumRaphael/fish_config.git
 	branch = master
 [submodule "nvim"]
 	path = nvim
