@@ -120,6 +120,17 @@ if [ "$1" = "fedora" ]  ||  [ "$1" = "--fedora" ] || [ "$1" = "-f" ]; then
 fi
 
 if [ "$1" = "nixos" ]  ||  [ "$1" = "--nixos" ] || [ "$1" = "-n" ]; then
+	secure_copy "btop"
+	secure_copy "hypr"
+	secure_copy "cava"
+	secure_copy "fastfetch"
+	secure_copy "rofi"
+	secure_copy "kitty"
+	secure_copy "Thunar"
+	secure_copy "waybar"
+
+	sleep 2
+	clear
 	echo -e "${MAGENTA} Please add that to ur nixos configuration"
 	echo -e "environment.systemPackages = with pkgs; [
 	ags
