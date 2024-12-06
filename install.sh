@@ -159,3 +159,21 @@ if [ "$1" = "nixos" ]  ||  [ "$1" = "--nixos" ] || [ "$1" = "-n" ]; then
 ];"
 fi
 
+if [ ! -d $HOME/.config/nvim/ ]; then
+	git clone https://github.com/EniumRaphael/neovimconf $HOME/.config/nvim
+fi
+
+if [ ! -d $HOME/.config/home-manager/ ]; then
+	git clone https://github.com/EniumRaphael/home-manager $HOME/.config/home-manager
+	if [ "$1" = "nixos" ]  ||  [ "$1" = "--nixos" ] || [ "$1" = "-n" ]; then
+	echo -e "${MAGENTA} Please add that to ur nixos configuration"
+	echo -e "environment.systemPackages = with pkgs; [
+	home-manager
+];"
+	else
+		sh <(curl -L https://nixos.org/nix/install) --daemon
+		nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
+		nix-channel --update
+		nix-shell '<home-manager>' -A install
+	fi
+fi
