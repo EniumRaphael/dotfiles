@@ -78,43 +78,43 @@ if [ "$1" = "fedora" ]  ||  [ "$1" = "--fedora" ] || [ "$1" = "-f" ]; then
 
 	secure_install_fedora "hyprland"
 	if [ to_install = "y" ] || [ to_install = "yes" ]; then
-		sudo dnf install hyprland hyprpaper nerd-fonts ags cava dunst kitty NetworkManager pamixer pavucontrol pipewire playerctl rofi swaylock swaylock-fancy waybar wireplumber wl-clipboard
+		sudo dnf install hyprland hyprpaper nerd-fonts ags cava dunst kitty NetworkManager pamixer pavucontrol pipewire playerctl rofi swaylock swaylock-fancy waybar wireplumber wl-clipboard -y
 	fi
 	secure_copy "hypr"
 
 	secure_install_fedora "cava"
 	if [ to_install = "y" ] || [ to_install = "yes" ]; then
-		sudo dnf install cava
+		sudo dnf install cava -y
 	fi
 	secure_copy "cava"
 
 	secure_install_fedora "fastfetch"
 	if [ to_install = "y" ] || [ to_install = "yes" ]; then
-		sudo dnf install fastfetch
+		sudo dnf install fastfetch -y
 	fi
 	secure_copy "fastfetch"
 
 	secure_install_fedora "rofi"
 	if [ to_install = "y" ] || [ to_install = "yes" ]; then
-		sudo dnf install rofi
+		sudo dnf install rofi -y
 	fi
 	secure_copy "rofi"
 
 	secure_install_fedora "kitty"
 	if [ to_install = "y" ] || [ to_install = "yes" ]; then
-		sudo dnf install kitty
+		sudo dnf install kitty -y
 	fi
 	secure_copy "kitty"
 
 	secure_install_fedora "Thunar"
 	if [ to_install = "y" ] || [ to_install = "yes" ]; then
-		sudo dnf install Thunar
+		sudo dnf install Thunar -y
 	fi
 	secure_copy "Thunar"
 
 	secure_install_fedora "waybar"
 	if [ to_install = "y" ] || [ to_install = "yes" ]; then
-		sudo dnf install waybar
+		sudo dnf install waybar -y
 	fi
 	secure_copy "waybar"
 fi
@@ -160,6 +160,13 @@ if [ "$1" = "nixos" ]  ||  [ "$1" = "--nixos" ] || [ "$1" = "-n" ]; then
 fi
 
 if [ ! -d $HOME/.config/nvim/ ]; then
+	if [ "$1" = "nixos" ]  ||  [ "$1" = "--nixos" ] || [ "$1" = "-n" ]; then
+	echo -e "${MAGENTA} Please add that to ur nixos configuration"
+	echo -e "environment.systemPackages = with pkgs; [
+	neovim
+];"
+	else
+		dnf install neovim -y
 	git clone https://github.com/EniumRaphael/neovimconf $HOME/.config/nvim
 fi
 
