@@ -78,7 +78,7 @@ if [ "$1" = "fedora" ]  ||  [ "$1" = "--fedora" ] || [ "$1" = "-f" ]; then
 
 	secure_install_fedora "hyprland"
 	if [ to_install = "y" ] || [ to_install = "yes" ]; then
-		sudo dnf install hyprland hyprpaper nerd-fonts ags cava dunst kitty NetworkManager pamixer pavucontrol pipewire playerctl rofi swaylock swaylock-fancy waybar wireplumber wl-clipboard -y
+		sudo dnf install hyprland hyprpaper nerd-fonts ags cava dunst kitty NetworkManager pamixer pavucontrol pipewire playerctl rofi swaylock swaylock-fancy waybar wireplumber wl-clipboard easyeffects -y
 	fi
 	secure_copy "hypr"
 
@@ -136,6 +136,7 @@ if [ "$1" = "nixos" ]  ||  [ "$1" = "--nixos" ] || [ "$1" = "-n" ]; then
 	ags
 	cava
 	dunst
+ 	easyeffects
 	fastfetch
 	gtk3
 	jq
